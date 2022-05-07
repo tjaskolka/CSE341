@@ -4,10 +4,41 @@ GET http://localhost:3000/contacts
 
 GET http://localhost:3000/contacts/626cf44a29e2831487c41387
 
-####
+###
 
 GET https://heroku-cse341.herokuapp.com/contacts
 
 ###
 
 GET https://heroku-cse341.herokuapp.com/contacts/626cf44a29e2831487c41387
+
+###
+
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Darth",
+    "lastName": "Vader",
+    "email": "darth@email.com",
+    "favoriteColor": "black",
+    "birthday": "10 Jan 3004"
+}
+
+###
+
+PUT http://localhost:3000/contacts/6276e65c6573205be43194f9 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Sidious",
+    "lastName": "Vader",
+    "email": "darth@email.com",
+    "favoriteColor": "dark black",
+    "birthday": "10 Jan 3004"
+}
+
+###
+
+DELETE http://localhost:3000/contacts/6276e65c6573205be43194f9 HTTP/1.1
+content-type: application/json

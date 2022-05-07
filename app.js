@@ -1,4 +1,4 @@
-const connect = require('./db/connection');
+const connect = require('./db/connect');
 const express = require('express');
 
 const professionalRoutes = require('./routes/professional');
@@ -6,8 +6,8 @@ const professionalRoutes = require('./routes/professional');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use('/', require('./routes'))
+app.use('/', require('./routes'));
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
-})
+  console.log(`Example app listening on port ${port}`);
+});
