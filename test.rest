@@ -42,3 +42,34 @@ content-type: application/json
 
 DELETE http://localhost:3000/contacts/6276e65c6573205be43194f9 HTTP/1.1
 content-type: application/json
+
+###
+
+POST https://heroku-cse341.herokuapp.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Darth",
+    "lastName": "Vader",
+    "email": "darth@email.com",
+    "favoriteColor": "black",
+    "birthday": "10 Jan 3004"
+}
+
+###
+
+PUT https://heroku-cse341.herokuapp.com/contacts/6276ec57e7c1ce716377ee48 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Sidious",
+    "lastName": "Vader",
+    "email": "darth@email.com",
+    "favoriteColor": "dark black",
+    "birthday": "10 Jan 3004"
+}
+
+###
+
+DELETE https://heroku-cse341.herokuapp.com/contacts/6276ec57e7c1ce716377ee48 HTTP/1.1
+content-type: application/json

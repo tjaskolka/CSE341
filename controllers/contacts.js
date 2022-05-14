@@ -25,10 +25,14 @@ const createContact = async (req, res) => {
     lastName: req.body.lastName,
     email: req.body.email,
     favoriteColor: req.body.favoriteColor,
-    birthday: req.body.birthday
+    birthday: req.body.birthday,
+    birthplace: req.body.birthplace,
+    favoriteFood: req.body.favoriteFood,
+    petsName: req.body.petsName
   };
   const response = await mongodb.getDb().db().collection('contacts').insertOne(contact);
   if (response.acknowledged) {
+    console.log(response.acknowledged);
     res.status(201).json(response);
   } else {
     res.status(500).json(response.error || 'An error occurred while creating the contact.');
@@ -42,7 +46,10 @@ const updateContact = async (req, res) => {
     lastName: req.body.lastName,
     email: req.body.email,
     favoriteColor: req.body.favoriteColor,
-    birthday: req.body.birthday
+    birthday: req.body.birthday,
+    birthplace: req.body.birthplace,
+    favoriteFood: req.body.favoriteFood,
+    petsName: req.body.petsName
   };
   console.log(contact);
   const response = await mongodb
