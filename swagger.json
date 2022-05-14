@@ -5,10 +5,10 @@
     "description": "API for Contact DB",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "heroku-cse341.herokuapp.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {
